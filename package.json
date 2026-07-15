@@ -1,0 +1,35 @@
+{
+  "name": "whatsapp-csv-exporter",
+  "version": "1.0.0",
+  "description": "Conversor de exportações do WhatsApp para CSV e Excel",
+  "main": "src/main.js",
+  "author": "smsolutions",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.samuel.whatsappcsv",
+    "productName": "WhatsApp CSV Exporter",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon.ico"
+    }
+  },
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "exceljs": "^4.4.0",
+    "fs-extra": "^11.3.6"
+  },
+  "devDependencies": {
+    "electron": "^43.1.1",
+    "electron-builder": "^26.15.3"
+  }
+}
